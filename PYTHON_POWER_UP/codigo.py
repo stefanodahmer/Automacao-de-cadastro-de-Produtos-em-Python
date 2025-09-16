@@ -1,6 +1,12 @@
 import pyautogui
 import time
 import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 #git add .
 #git commit -m "Mensagem explicando a alteração"
@@ -16,30 +22,30 @@ pyautogui.PAUSE = 0.3
 
 # Passo 1 ENTRAR NO SISTEMA DA EMPRESA - https://dlp.hashtagtreinamentos.com/python/intensivao/tabela
 
-pyautogui.press("win")  # tempo de espera entre cada comando
-pyautogui.write("chrome")
-pyautogui.press("enter")
+#pyautogui.press("win")  # tempo de espera entre cada comando
+#pyautogui.write("chrome")
+#pyautogui.press("enter")
+
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
 site = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
-pyautogui.write(site)
-pyautogui.press("enter")
+driver.get(site)
 
 time.sleep(1.0)
-pyautogui.hotkey("win", "up")
+
 
 #=======================================================================#
 
 # PASSO 2 FAZER LOGIN
 
-pyautogui.click(x=732, y=473)
-pyautogui.write("generico@gmail.com")
-pyautogui.press("tab")
-pyautogui.write("senha123")
-pyautogui.press("enter")
+email = driver.find_element(By.ID, "email")
+senha = driver.find_element(By.ID, "password")
 
-time.sleep(1.0)
-pyautogui.click(x=1618, y=138)
+email.send_keys("generico@gmail.com")
+senha.send_keys("senha123")
+senha.send_keys(Keys.ENTER)
 
+time.sleep(2)
 #=======================================================================#
 # PASSO 3 IMPORTAR A BASE DE DADOS
 # import pandas as pd
@@ -52,7 +58,7 @@ tabela = pd.read_csv("PYTHON_POWER_UP/produtos.csv")
 for linha in tabela.index:
     pyautogui.scroll(10000)  # scroll 
 
-    pyautogui.click(x=680, y=316)  # clicar em adicionar produto
+    driver.find_element(By.XPATH, '//*[@id="codigo"]').click()
 
     codigo = str(tabela.loc[linha, "codigo"])
     pyautogui.write(codigo)
