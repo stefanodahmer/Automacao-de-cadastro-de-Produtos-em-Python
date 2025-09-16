@@ -1,7 +1,7 @@
 🖱️ Automação de Cadastro com PyAutoGUI
 📌 Sobre o Projeto
 
-Este projeto foi desenvolvido em Python com a biblioteca PyAutoGUI, e tem como objetivo automatizar o cadastro de produtos em um sistema web.
+Este projeto foi desenvolvido em Python com a biblioteca PyAutoGUI e Selenium, e tem como objetivo automatizar o cadastro de produtos em um sistema web.
 A automação simula as ações humanas (cliques, digitação e navegação), lendo os dados de um arquivo .csv e preenchendo os formulários automaticamente.
 
 🚀 Funcionalidades
@@ -19,9 +19,8 @@ Inserir informações como código, marca, tipo, categoria, preço unitário, cu
 🛠️ Tecnologias Utilizadas
 
 Python 3.x
-
+Selenium
 PyAutoGUI
- → automação da interface gráfica.
 
 Pandas
  → leitura e manipulação da base de dados.
