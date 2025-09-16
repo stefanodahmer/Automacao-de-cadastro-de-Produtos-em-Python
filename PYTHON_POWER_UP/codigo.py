@@ -37,8 +37,7 @@ pyautogui.press("tab")
 pyautogui.write("senha123")
 pyautogui.press("enter")
 
-time.sleep(1.5)
-print(pyautogui.position())
+time.sleep(1.0)
 pyautogui.click(x=1618, y=138)
 
 #=======================================================================#
