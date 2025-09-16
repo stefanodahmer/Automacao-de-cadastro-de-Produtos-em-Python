@@ -50,7 +50,7 @@ time.sleep(1)
 # PASSO 3 IMPORTAR A BASE DE DADOS
 # import pandas as pd
 
-tabela = pd.read_csv("PYTHON_POWER_UP/produtos.csv")
+tabela = pd.read_csv("PYTHON_POWER_UP_AULA1/AULA1/produtos.csv")
 
 # PASSO 4 CADASTRAR UM PRODUTO
 # PASSO 5 REPETIR PARA TODOS OS PRODUTOS
