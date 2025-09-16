@@ -24,7 +24,7 @@ site = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
 pyautogui.write(site)
 pyautogui.press("enter")
 
-time.sleep(0.5)
+time.sleep(1.0)
 pyautogui.click(x=1842, y=41) 
 
 #=======================================================================#
