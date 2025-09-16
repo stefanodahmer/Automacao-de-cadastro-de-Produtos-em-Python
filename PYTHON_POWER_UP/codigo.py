@@ -25,7 +25,7 @@ pyautogui.write(site)
 pyautogui.press("enter")
 
 time.sleep(1.0)
-pyautogui.click(x=1842, y=41) 
+pyautogui.hotkey("win", "up")
 
 #=======================================================================#
 
