@@ -18,7 +18,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 # pyautogui.write -> escrever um texto
 # pyautogui.hotkey -> apertar uma combinação de teclas (ctrl, c)
 
-pyautogui.PAUSE = 0.3
+pyautogui.PAUSE = 0.2
 
 # Passo 1 ENTRAR NO SISTEMA DA EMPRESA - https://dlp.hashtagtreinamentos.com/python/intensivao/tabela
 
@@ -45,7 +45,7 @@ email.send_keys("generico@gmail.com")
 senha.send_keys("senha123")
 senha.send_keys(Keys.ENTER)
 
-time.sleep(2)
+time.sleep(1)
 #=======================================================================#
 # PASSO 3 IMPORTAR A BASE DE DADOS
 # import pandas as pd
