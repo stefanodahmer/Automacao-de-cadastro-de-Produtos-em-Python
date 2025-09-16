@@ -2,6 +2,11 @@ import pyautogui
 import time
 import pandas as pd
 
+#git add .
+#git commit -m "Mensagem explicando a alteração"
+#git push
+
+
 # pyautogui.click -> clicar em alguma lugar
 # pyautogui.press -> apertar uma tecla
 # pyautogui.write -> escrever um texto
@@ -33,6 +38,7 @@ pyautogui.write("senha123")
 pyautogui.press("enter")
 
 time.sleep(1.5)
+print(pyautogui.position())
 pyautogui.click(x=1618, y=138)
 
 #=======================================================================#
@@ -42,12 +48,6 @@ pyautogui.click(x=1618, y=138)
 tabela = pd.read_csv("PYTHON_POWER_UP/produtos.csv")
 
 # PASSO 4 CADASTRAR UM PRODUTO
-time.sleep(1.0)
-
-pyautogui.click(x=680, y=316)  # clicar em adicionar produto
-
-
-
 # PASSO 5 REPETIR PARA TODOS OS PRODUTOS
 
 for linha in tabela.index:
